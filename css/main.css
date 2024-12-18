@@ -1,0 +1,166 @@
+/* Style global */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    box-sizing: border-box;
+    color: #495057;
+}
+
+/* Titre principal */
+h1 {
+    font-size: 2.8rem;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-out;
+}
+
+#show-communes, #get-location, #show-contour{
+    width: auto;
+    padding: 10px 20px;
+}
+
+/* Animation pour faire apparaître le titre */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Conteneur principal */
+div {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    margin: 20px;
+    transform: translateY(10px);
+    animation: slideUp 0.5s ease-out forwards;
+}
+
+/* Animation d'apparition pour le conteneur */
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Style des menus déroulants */
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ced4da;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Effet de focus sur le select */
+select:focus {
+    border-color: #007bff;
+    background-color: #e9f5ff;
+    outline: none;
+}
+
+/* Bouton d'action */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Effet de survol du bouton */
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Liste des communes */
+#communes-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#communes-list li {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Effet d'hover sur les éléments de la liste */
+#communes-list li:hover {
+    transform: translateX(10px);
+    background-color: #e9f5ff;
+}
+
+/* Alerte d'erreur ou message */
+.alert {
+    width: 100%;
+    background-color: #dc3545;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alert-close {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.alert-close:hover {
+    color: #f8d7da;
+}
+
+/* Style du conteneur de la carte (si le bonus de carte est utilisé) */
+#map {
+    width: 100%;
+    height: 400px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
