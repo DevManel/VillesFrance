@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Villes en France</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Lien vers Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <h1>Liste des villes en France</h1>
+    <div>
+        <label for="regions">Région :</label>
+        <select id="regions">
+            <option value="">Sélectionner une région</option>
+        </select>
+    </div>
+    
+    <div>
+        <label for="departements">Département :</label>
+        <select id="departements">
+            <option value="">Sélectionner un département</option>
+        </select>
+    </div>
+    
+    <button id="show-communes">Afficher les communes</button>
+
+    <div id="communes-list">
+        <ul></ul>
+    </div>
+
+    <!-- Ajouter les boutons pour les bonus -->
+    <button id="get-location">Géolocaliser la ville</button>
+    <br>
+    <button id="show-contour">Afficher le contour de la ville</button>
+
+    <!-- Div pour afficher la carte -->
+    <div id="map" style="height: 400px; width: 100%;"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
